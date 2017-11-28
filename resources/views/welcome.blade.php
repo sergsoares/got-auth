@@ -78,16 +78,35 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-success">
+
+                @if(Auth::check())
+                <div class="panel-heading">
+                   List of Game of Thrones! 
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <table class="table">
+
+                <tr>
+                    <th>Character</th>
+                    <th>Real Name</th>
+                </tr>
+                @foreach($characters as $key => $value)
+
+                    <tr>
+                        <td></td><td></td>
+                    </tr>
+                @endforeach
+                </table>
+                @endif
+
+                @if(Auth::guest())
+                    <a href="/login" class="btn btn-info"> You need to login to see the list 😜😜 >></a>
+                @endif
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>

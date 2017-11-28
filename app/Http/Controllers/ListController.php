@@ -22,6 +22,6 @@ class ListController extends Controller
             'Lord Varys'         => 'Conleth Hill'
           ];
        
-        return view('welcome')->withCaracters($characters);
+        return view('welcome')->withCharacters($characters);
     }
 }
