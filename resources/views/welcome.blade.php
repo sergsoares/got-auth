@@ -96,7 +96,8 @@
                 @foreach($characters as $key => $value)
 
                     <tr>
-                        <td></td><td></td>
+                        <td> {{ $key }} </td>
+                        <td> {{ $value }} </td>
                     </tr>
                 @endforeach
                 </table>
