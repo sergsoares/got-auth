@@ -23,3 +23,14 @@ Route::get('/got', [
         echo 'You are allowed to view this page!';
     }
 ]);
+
+Route::get('/chars', function() {
+    echo 'You are authenticated in chars.';
+})->middleware('auth');
+
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/persons', function(){
+        echo 'You are Authenticated in Persons';
+    });
+});
